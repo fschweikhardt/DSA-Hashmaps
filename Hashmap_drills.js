@@ -53,13 +53,14 @@ function removeDuplicates(string) {
         //console.log(duplicate)
     }
       
-    let newStr = '';
-    duplicate._hashTable.forEach(letter => {
-        newStr += letter.value;
+    let newString = '';
+    duplicate._hashTable.forEach(x => {
+        newString += x.value;
     })
 
-    console.log(newStr)
+    console.log(newString)
 
 }
 
-removeDuplicates('112233445566778899')
+//removeDuplicates('112233445566778899')
+
