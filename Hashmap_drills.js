@@ -46,7 +46,7 @@ const WhatDoesThisDo = function(){
 function removeDuplicate(string) {
 
     const duplicate = new HashMap()
-    duplicate._capacity=16
+    //duplicate._capacity=10000
     
     for (let i = 0; i < string.length; i++) {
         duplicate.set(string[i], string[i])
@@ -62,7 +62,7 @@ function removeDuplicate(string) {
 
 }
 
-//removeDuplicate('google')
+removeDuplicate('google')
 
 function removeDuplicates(string) {
     const map = new Map()
@@ -95,5 +95,5 @@ function palindrome(string) {
     } return false;
 }
 
-console.log(palindrome('acecarr')) // true;
-console.log(palindrome('north')) // false;
+//console.log(palindrome('acecarr')) // true;
+//console.log(palindrome('north')) // false;
