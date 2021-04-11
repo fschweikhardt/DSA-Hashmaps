@@ -43,7 +43,7 @@ const WhatDoesThisDo = function(){
 
 //WhatDoesThisDo()
 
-function removeDuplicates(string) {
+function removeDuplicate(string) {
 
     const duplicate = new HashMap()
     duplicate._capacity=16
@@ -62,5 +62,38 @@ function removeDuplicates(string) {
 
 }
 
-//removeDuplicates('112233445566778899')
+//removeDuplicate('google')
 
+function removeDuplicates(string) {
+    const map = new Map()
+    let newStr = ''
+    let split = string.split('')
+    split.forEach(letter => {
+        if (!map.has(letter)) {
+            map.set(letter, 'does not matter')
+            newStr += letter
+            console.log(newStr)
+            }
+        })
+    return newStr
+}
+
+//console.log(removeDuplicates('google'))
+
+
+function palindrome(string) {
+    const result = new Map();
+    for (let i = 0; i < string.length; i++) {
+        console.log(result);
+        if (!result.delete(string[i])) {
+            result.set(string[i], 1);
+        }
+    }
+    console.log(result.size, result);
+    if (result.size <= 1) {
+        return true;
+    } return false;
+}
+
+console.log(palindrome('acecarr')) // true;
+console.log(palindrome('north')) // false;
