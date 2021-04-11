@@ -1,4 +1,4 @@
-export default class HashMap {
+class HashMap {
     constructor(initialCapacity=8) {
         this.length = 0;
         this._hashTable = [];
@@ -86,3 +86,5 @@ export default class HashMap {
         return hash >>> 0;
     }
 }
+
+module.exports = HashMap
