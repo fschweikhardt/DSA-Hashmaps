@@ -25,7 +25,7 @@ function main() {
     // console.log('Hobbit key:', lotr.get('Hobbit'))
 }
 const hashMap = main()
-console.log(hashMap)
+//console.log(hashMap)
 
 const WhatDoesThisDo = function(){
     let str1 = 'Hello World.';
@@ -45,6 +45,16 @@ const WhatDoesThisDo = function(){
 
 //WhatDoesThisDo()
 
+
+'4. Remove duplicates'
+
+let string1 = 'google'
+let string2 = 'google all that you think can think of'
+
+// function removeDoubles(string) {
+
+// }
+
 function removeDuplicate(string) {
 
     const duplicate = new HashMap()
@@ -61,24 +71,23 @@ function removeDuplicate(string) {
     })
 
     console.log(newString)
-
 }
 
-//removeDuplicate('google')
+removeDuplicate('google')
 
-function removeDuplicates(string) {
-    const map = new Map()
-    let newStr = ''
-    let split = string.split('')
-    split.forEach(letter => {
-        if (!map.has(letter)) {
-            map.set(letter, 'does not matter')
-            newStr += letter
-            console.log(newStr)
-            }
-        })
-    return newStr
-}
+// function removeDuplicates(string) {
+//     const map = new Map()
+//     let newStr = ''
+//     let split = string.split('')
+//     split.forEach(letter => {
+//         if (!map.has(letter)) {
+//             map.set(letter, 'does not matter')
+//             newStr += letter
+//             console.log(newStr)
+//             }
+//         })
+//     return newStr
+// }
 
 //console.log(removeDuplicates('google'))
 
