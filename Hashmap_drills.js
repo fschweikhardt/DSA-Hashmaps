@@ -6,24 +6,26 @@ function main() {
     lotr.MAX_LOAD_RATIO = .5
     lotr.MAX_SIZE_RATIO = 3
 
-    lotr.set('Hobbit', 'Bilbo')
+    // lotr.set('Hobbit', 'Bilbo')
     lotr.set('Hobbit', 'Frodo')
     lotr.set('Wizard', 'Gandolf')
     lotr.set('Human', 'Aragorn')
-    lotr.set('Elf', 'Legolas')
-    lotr.set('Maiar', 'The Necromancer')
-    lotr.set('Maiar', 'Sauron')
-    lotr.set('RingBearer', 'Gollum')
-    lotr.set('LadyOfLight', 'Galadriel')
-    lotr.set('HalfElven', 'Arwen')
-    lotr.set('Ent', 'Treebeard')
+    // lotr.set('Elf', 'Legolas')
+    // lotr.set('Maiar', 'The Necromancer')
+    // lotr.set('Maiar', 'Sauron')
+    // lotr.set('RingBearer', 'Gollum')
+    // lotr.set('LadyOfLight', 'Galadriel')
+    // lotr.set('HalfElven', 'Arwen')
+    // lotr.set('Ent', 'Treebeard')
     
-    console.log(lotr._capacity)
+    console.log(lotr)
+    
+    // console.log(lotr._capacity)
     // console.log('Maiar key:', lotr.get('Maiar'))
     // console.log('Hobbit key:', lotr.get('Hobbit'))
 }
-
-//main()
+const hashMap = main()
+console.log(hashMap)
 
 const WhatDoesThisDo = function(){
     let str1 = 'Hello World.';
@@ -62,7 +64,7 @@ function removeDuplicate(string) {
 
 }
 
-removeDuplicate('google')
+//removeDuplicate('google')
 
 function removeDuplicates(string) {
     const map = new Map()
