@@ -96,12 +96,17 @@ function removeDuplicates(string) {
 function palindrome(string) {
     const result = new Map();
     for (let i = 0; i < string.length; i++) {
-        // console.log(result);
         if (!result.delete(string[i])) {
-            result.set(string[i], '');
+            result.set(string[i], '')
         }
+    //this works too!
+        //     if (result.has(string[i])) {
+        //         result.delete(string[i])
+        //     } else {
+        //         result.set(string[i], 'map set')
+        //     }
     }
-    console.log(result.size, result);
+    console.log(result.size, result)
     if (result.size <= 1) {
         // console.log(result.size)
         return true;
@@ -110,7 +115,7 @@ function palindrome(string) {
 // console.log(palindrome('raccear')) 
 // console.log(palindrome('north')) 
 // console.log(palindrome('messem'))
-// console.log(palindrome('aba')) 
+console.log(palindrome('aba')) 
 // console.log(palindrome('abc')) 
 
 
