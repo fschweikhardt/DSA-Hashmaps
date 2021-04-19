@@ -96,16 +96,29 @@ function removeDuplicates(string) {
 function palindrome(string) {
     const result = new Map();
     for (let i = 0; i < string.length; i++) {
-        console.log(result);
+        // console.log(result);
         if (!result.delete(string[i])) {
-            result.set(string[i], 1);
+            result.set(string[i], '');
         }
     }
     console.log(result.size, result);
     if (result.size <= 1) {
+        // console.log(result.size)
         return true;
     } return false;
 }
+// console.log(palindrome('raccear')) 
+// console.log(palindrome('north')) 
+// console.log(palindrome('messem'))
+// console.log(palindrome('aba')) 
+// console.log(palindrome('abc')) 
 
-//console.log(palindrome('acecarr')) // true;
-//console.log(palindrome('north')) // false;
+
+'6. Anagram grouping'
+let inputAnagram = ['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race']
+// output = [
+//         ['east', 'teas', 'eats'],
+//         ['cars', 'arcs'],
+//         ['acre', 'race']
+//    ]
+
