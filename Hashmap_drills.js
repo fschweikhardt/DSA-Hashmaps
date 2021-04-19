@@ -99,14 +99,13 @@ function palindrome(string) {
         if (!result.delete(string[i])) {
             result.set(string[i], '')
         }
-    //this works too!
+    //longer version (works)
         //     if (result.has(string[i])) {
         //         result.delete(string[i])
         //     } else {
         //         result.set(string[i], 'map set')
         //     }
     }
-    console.log(result.size, result)
     if (result.size <= 1) {
         // console.log(result.size)
         return true;
@@ -115,7 +114,7 @@ function palindrome(string) {
 // console.log(palindrome('raccear')) 
 // console.log(palindrome('north')) 
 // console.log(palindrome('messem'))
-console.log(palindrome('aba')) 
+// console.log(palindrome('aba')) 
 // console.log(palindrome('abc')) 
 
 
@@ -127,3 +126,26 @@ let inputAnagram = ['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race']
 //         ['acre', 'race']
 //    ]
 
+function anagramGrouping(arr) {
+    let map = new Map()
+    for (let i = 0; i < arr.length; i++) {
+
+    }
+}
+
+function anagrams(input) {
+    const map = new Map();
+
+    for (let i = 0; i < input.length; ++i) {
+        const key = [...input[i]].sort().join('')
+        // console.log(key)
+        const value = map.has(key) ? map.get(key) : []
+        // console.log(value)
+        value.push(input[i])
+        map.set(key, value)
+    }
+
+    return [...map.values()]
+}
+console.log(anagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+// console.log(anagrams(inputAnagram))
