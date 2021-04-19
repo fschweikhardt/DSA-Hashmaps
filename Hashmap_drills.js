@@ -71,43 +71,27 @@ function removeDoubles(string) {
     return filteredString.join('')
 }
 
-console.log(removeDoubles(string2))
+//console.log(removeDoubles(string2))
 
-// function removeDuplicate(string) {
 
-//     const duplicate = new HashMap()
-//     //duplicate._capacity=10000
-    
-//     for (let i = 0; i < string.length; i++) {
-//         duplicate.set(string[i], string[i])
-//         //console.log(duplicate)
-//     }
-      
-//     let newString = '';
-//     duplicate._hashTable.forEach(x => {
-//         newString += x.value;
-//     })
-//     return newString
-// }
+function removeDuplicates(string) {
+    const map = new Map()
+    let newStr = ''
+    string.split('').forEach(letter => {
+        if (!map.has(letter)) {
+            map.set(letter, 'does not matter')
+            newStr += letter
+        } else {
+            console.log(`already have ${letter}`)
+        }
+        
+        })
+    return newStr
+}
+//console.log('return', removeDuplicates('abcabc'))
 
-//console.log(removeDuplicate('google'))
 
-// function removeDuplicates(string) {
-//     const map = new Map()
-//     let newStr = ''
-//     let split = string.split('')
-//     split.forEach(letter => {
-//         if (!map.has(letter)) {
-//             map.set(letter, 'does not matter')
-//             newStr += letter
-//             console.log(newStr)
-//             }
-//         })
-//     return newStr
-// }
-
-//console.log(removeDuplicates('google'))
-
+'5. Any permutation a palindrome'
 
 function palindrome(string) {
     const result = new Map();
