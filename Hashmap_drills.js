@@ -24,7 +24,7 @@ function main() {
     // console.log('Maiar key:', lotr.get('Maiar'))
     // console.log('Hobbit key:', lotr.get('Hobbit'))
 }
-const hashMap = main()
+//const hashMap = main()
 //console.log(hashMap)
 
 const WhatDoesThisDo = function(){
@@ -51,29 +51,46 @@ const WhatDoesThisDo = function(){
 let string1 = 'google'
 let string2 = 'google all that you think can think of'
 
-// function removeDoubles(string) {
+function removeDoubles(string) {
 
-// }
+    const duplicateMap = new Map()
 
-function removeDuplicate(string) {
-
-    const duplicate = new HashMap()
-    //duplicate._capacity=10000
-    
     for (let i = 0; i < string.length; i++) {
-        duplicate.set(string[i], string[i])
-        //console.log(duplicate)
+        duplicateMap.set(string[i], '')
     }
-      
-    let newString = '';
-    duplicate._hashTable.forEach(x => {
-        newString += x.value;
+
+    let newString = ''
+    for (let letter of duplicateMap) {
+        newString += letter
+    }
+
+    const filteredString = newString.split('').filter(letters => {
+       return letters !== ','
     })
 
-    console.log(newString)
+    return filteredString.join('')
 }
 
-removeDuplicate('google')
+console.log(removeDoubles(string2))
+
+// function removeDuplicate(string) {
+
+//     const duplicate = new HashMap()
+//     //duplicate._capacity=10000
+    
+//     for (let i = 0; i < string.length; i++) {
+//         duplicate.set(string[i], string[i])
+//         //console.log(duplicate)
+//     }
+      
+//     let newString = '';
+//     duplicate._hashTable.forEach(x => {
+//         newString += x.value;
+//     })
+//     return newString
+// }
+
+//console.log(removeDuplicate('google'))
 
 // function removeDuplicates(string) {
 //     const map = new Map()
